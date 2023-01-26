@@ -3,7 +3,7 @@
 
 i=10
 
-unit [ $i -eq 0 ];
+until [ $i -eq 0 ];
 do
 
 	echo "Best School"
