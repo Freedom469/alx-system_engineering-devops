@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#prints hi 
 i=0
 
 while [ $i -le 10 ];
