@@ -3,4 +3,4 @@
 
 #You cannot use kill or killall
 
-pkill -SIGKILL 4-to_infinity_and_beyond
+pkill -SIGKILL -f 4-to_infinity_and_beyond
