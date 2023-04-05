@@ -1,4 +1,4 @@
-#!/usr/bin/env/ bash
+#!/usr/bin/env bash
 # write a Bash script that configures a new Ubuntu machine
 
 sudo apt-get -y update
