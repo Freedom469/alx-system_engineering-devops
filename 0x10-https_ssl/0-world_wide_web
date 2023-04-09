@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+display () {
+  dig +short "${2}.${1}" | awk '{print "The subdomain '"$2"' is a A record and points to " $1}'
+}
+
+if [ "$#" -eq 1 ]
+then
+    subDomainList=("www" "lb-01" "web-01" "web-02")
+
+    for subdomain in "${subDomainList[@]}"
+    do 
+        display "$1" "$subdomain"
+
+    done
+
+elif [ "$#" -eq 2 ]
+then
+
+    display "$1" "$2"
+
+elif [ $# == 0 ]
+then
+    echo "Usage: ./0-world_wide_web <domain> <subdomain>"
+fi
