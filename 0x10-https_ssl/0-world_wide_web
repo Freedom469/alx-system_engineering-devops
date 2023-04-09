@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# a Bash script that will display information about subdomains.
 
 display () {
   dig +short "${2}.${1}" | awk '{print "The subdomain '"$2"' is a A record and points to " $1}'
