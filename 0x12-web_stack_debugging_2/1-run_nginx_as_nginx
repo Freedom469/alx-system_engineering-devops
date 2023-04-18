@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# a Bash script that configures the container to fit the above requirements
+
+# Change the ownership of the nginx process to the nginx user
+sed -i 's/user\s*nginx;/user nginx nginx;/g' /etc/nginx/nginx.conf
+
+# Change the ownership of the nginx cache directory to the nginx user
+chown -R nginx:nginx /var/cache/nginx
+
+# Change the ownership of the nginx log directory to the nginx user
+chown -R nginx:nginx /var/log/nginx
+
+# Make sure nginx is listening on all active IPs on port 8080
+sed -i 's/listen\s*80;/listen 8080;/g' /etc/nginx/conf.d/default.conf
+
+# Start nginx
+nginx -g "daemon off;"
+
