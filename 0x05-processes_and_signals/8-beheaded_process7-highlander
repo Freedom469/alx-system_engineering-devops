@@ -1,3 +1,0 @@
-k#!/usr/bin/env bash
-#kill 7-highlander
-killall -s 7-highlander
