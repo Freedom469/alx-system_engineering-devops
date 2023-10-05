@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#change the default port from 8080 to 80
+#port mismatching 
+
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
+pkill -o nginx
